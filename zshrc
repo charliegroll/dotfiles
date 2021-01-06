@@ -1,7 +1,5 @@
 export PATH=/opt/homebrew/bin:$PATH
 
-. /opt/homebrew/opt/asdf/asdf.sh
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 eval "$(starship init zsh)"
@@ -42,4 +40,9 @@ zinit wait lucid for \
 zinit light mdumitru/git-aliases
 
 ### End Zinit plugins
+
+. /opt/homebrew/opt/asdf/asdf.sh
+
+### Make Homebrew's completions available
+FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
 
