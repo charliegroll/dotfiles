@@ -29,6 +29,8 @@ zinit light-mode for \
 
 ### Zinit plugins
 
+zinit light Aloxaf/fzf-tab
+
 zinit wait lucid for \
  atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" \
     zdharma/fast-syntax-highlighting \
@@ -38,6 +40,8 @@ zinit wait lucid for \
     zsh-users/zsh-autosuggestions
 
 zinit light mdumitru/git-aliases
+
+zinit light lukechilds/zsh-better-npm-completion
 
 ### End Zinit plugins
 
