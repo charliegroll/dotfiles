@@ -50,3 +50,11 @@ zinit light lukechilds/zsh-better-npm-completion
 ### Make Homebrew's completions available
 FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
 
+if [ "$(command -v exa)" ]; then
+    unalias -m 'll'
+    unalias -m 'l'
+    unalias -m 'la'
+    unalias -m 'ls'
+    alias ls='exa -G  --color auto --icons -a -s type'
+    alias ll='exa -l --color always --icons -a -s type'
+fi
