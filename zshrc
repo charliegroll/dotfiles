@@ -45,7 +45,7 @@ zinit light lukechilds/zsh-better-npm-completion
 
 ### End Zinit plugins
 
-. /opt/homebrew/opt/asdf/asdf.sh
+. $(brew --prefix)/opt/asdf/asdf.sh
 
 ### Make Homebrew's completions available
 FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
