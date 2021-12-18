@@ -43,9 +43,12 @@ zinit light mdumitru/git-aliases
 
 zinit light lukechilds/zsh-better-npm-completion
 
+zinit light chrisands/zsh-yarn-completions
+
 ### End Zinit plugins
 
-. $(brew --prefix)/opt/asdf/asdf.sh
+export ASDF_DIR="$(brew --prefix asdf)/libexec"
+. $(brew --prefix)/opt/asdf/libexec/asdf.sh
 
 ### Make Homebrew's completions available
 FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
