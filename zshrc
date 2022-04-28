@@ -61,3 +61,15 @@ if [ "$(command -v exa)" ]; then
     alias ls='exa -G  --color auto --icons -a -s type'
     alias ll='exa -l --color always --icons -a -s type'
 fi
+
+export GPG_TTY=$(tty)
+
+git-prune-squashed() {
+    git checkout -q main && git for-each-ref refs/heads/ "--format=%(refname:short)" | while read branch; do mergeBase=$(git merge-base main $branch) && [[ $(git cherry main $(git commit-tree $(git rev-parse "$branch^{tree}") -p $mergeBase -m _)) == "-"* ]] && git branch -D $branch; done
+}
+
+if [[ ! -a ~/.netlifyrc ]]; then
+    echo "~/.netlifyrc not found."
+else
+    source ~/.netlifyrc
+fi
