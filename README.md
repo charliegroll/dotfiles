@@ -6,4 +6,4 @@
    ([docs](https://docs.brew.sh/Manpage#bundle-subcommand))
 1. `cd ~`
 1. `ln -s Developer/charliegroll/dotfiles/vimrc .vimrc`
-2. `ln -s Developer/charliegroll/dotfiles/zshrc .zshrc``
+2. `ln -s Developer/charliegroll/dotfiles/zshrc .zshrc`
