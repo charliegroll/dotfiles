@@ -7,6 +7,7 @@
 1. `cd ~`
 1. `ln -s Developer/charliegroll/dotfiles/vimrc .vimrc`
 2. `ln -s Developer/charliegroll/dotfiles/zshrc .zshrc`
+1. `ln -s Developer/charliegroll/dotfiles/config/* ~/.config/`
 
 ### asdf
 
