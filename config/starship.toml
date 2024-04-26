@@ -1,0 +1,5 @@
+[dotnet]
+disabled = true
+
+[gcloud]
+disabled=true
