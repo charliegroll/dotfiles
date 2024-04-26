@@ -7,3 +7,7 @@
 1. `cd ~`
 1. `ln -s Developer/charliegroll/dotfiles/vimrc .vimrc`
 2. `ln -s Developer/charliegroll/dotfiles/zshrc .zshrc`
+
+### asdf
+
+- `asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git`

@@ -1,5 +1,7 @@
 export PATH=/opt/homebrew/bin:$PATH
 
+export EDITOR=vim
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 eval "$(starship init zsh)"
@@ -64,3 +66,16 @@ if [[ ! -a ~/.netlifyrc ]]; then
 else
     source ~/.netlifyrc
 fi
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/charlie/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/charlie/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/charlie/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/charlie/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+# bun completions
+[ -s "/Users/charlie/.bun/_bun" ] && source "/Users/charlie/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
