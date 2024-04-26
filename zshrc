@@ -6,6 +6,13 @@ export EDITOR=vim
 
 eval "$(starship init zsh)"
 
+### Make Homebrew's completions available
+if type brew &>/dev/null; then
+    FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+    autoload -Uz compinit
+    compinit
+fi
+
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
     print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
@@ -38,22 +45,24 @@ zinit light lukechilds/zsh-better-npm-completion
 
 zinit light chrisands/zsh-yarn-completions
 
+zi wait lucid for \
+  has'eza' atinit'AUTOCD=1' \
+    z-shell/zsh-eza
 ### End Zinit plugins
+
+### Eza aliases
+alias ls='eza $eza_params'
+alias l='eza --git-ignore $eza_params'
+alias ll='eza --all --header --long $eza_params'
+alias llm='eza --all --header --long --sort=modified $eza_params'
+alias la='eza -lbhHigUmuSa'
+alias lx='eza -lbhHigUmuSa@'
+alias lt='eza --tree $eza_params'
+alias tree='eza --tree $eza_params'
+### End Eza aliases
 
 export ASDF_DIR="$(brew --prefix asdf)/libexec"
 . $(brew --prefix)/opt/asdf/libexec/asdf.sh
-
-### Make Homebrew's completions available
-FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
-
-if [ "$(command -v exa)" ]; then
-    unalias -m 'll'
-    unalias -m 'l'
-    unalias -m 'la'
-    unalias -m 'ls'
-    alias ls='exa -G  --color auto --icons -a -s type'
-    alias ll='exa -l --color always --icons -a -s type'
-fi
 
 export GPG_TTY=$(tty)
 
