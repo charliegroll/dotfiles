@@ -1,3 +1,4 @@
+### Homebrew
 1. Install [Homebrew](https://brew.sh/)
 1. `mkdir -p ~/Developer/charliegroll`
 1. `cd $_`
@@ -8,6 +9,10 @@
 1. `ln -s Developer/charliegroll/dotfiles/vimrc .vimrc`
 2. `ln -s Developer/charliegroll/dotfiles/zshrc .zshrc`
 1. `ln -s Developer/charliegroll/dotfiles/config/* ~/.config/`
+
+#### To update ([more info](https://gist.github.com/ChristopherA/a579274536aab36ea9966f301ff14f3f))
+
+- `brew bundle dump --file=./Brewfile --force`
 
 ### asdf
 
