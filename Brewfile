@@ -55,23 +55,32 @@ cask "ngrok"
 cask "okta"
 cask "raycast"
 cask "zoom"
+mas "Dato", id: 1470584107
+mas "Fantastical", id: 975937182
+mas "Hidden Bar", id: 1452453066
+mas "Irvue", id: 1039633667
+mas "Jiffy", id: 1502527999
+mas "Keynote", id: 409183694
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Reeder", id: 1529448980
+mas "Step Two", id: 1448916662
+mas "Things", id: 904280696
+mas "Velja", id: 1607635845
+mas "Xcode", id: 497799835
 vscode "astro-build.houston"
 vscode "atomiks.moonlight"
 vscode "beardedbear.beardedtheme"
 vscode "bradlc.vscode-tailwindcss"
-vscode "castwide.solargraph"
 vscode "cev.overnight"
 vscode "christian-kohler.npm-intellisense"
 vscode "christian-kohler.path-intellisense"
 vscode "chunsen.bracket-select"
 vscode "dbaeumer.vscode-eslint"
-vscode "denoland.vscode-deno"
-vscode "devcycle.devcycle-feature-flags"
 vscode "eamodio.gitlens"
 vscode "editorconfig.editorconfig"
 vscode "esbenp.prettier-vscode"
 vscode "figma.figma-vscode-extension"
-vscode "firsttris.vscode-jest-runner"
 vscode "github.codespaces"
 vscode "github.copilot"
 vscode "github.copilot-chat"
@@ -83,7 +92,6 @@ vscode "joshbolduc.story-explorer"
 vscode "kaiwood.better-line-select"
 vscode "mattpocock.ts-error-translator"
 vscode "mechatroner.rainbow-csv"
-vscode "misogi.ruby-rubocop"
 vscode "mohsen1.prettify-json"
 vscode "ms-azuretools.vscode-docker"
 vscode "ms-vscode-remote.remote-containers"
@@ -94,14 +102,11 @@ vscode "peymanslh.blueberry-dark-theme"
 vscode "ronnidc.nunjucks"
 vscode "ryu1kn.partial-diff"
 vscode "sdras.night-owl"
-vscode "shopify.ruby-lsp"
 vscode "shopify.theme-check-vscode"
 vscode "simonsiefke.svg-preview"
 vscode "stylelint.vscode-stylelint"
-vscode "tamasfe.even-better-toml"
 vscode "tonybaloney.vscode-pets"
 vscode "trongthanh.theme-boxythemekit"
-vscode "vunguyentuan.vscode-postcss"
 vscode "wallabyjs.console-ninja"
 vscode "wallabyjs.quokka-vscode"
 vscode "wayou.vscode-todo-highlight"
