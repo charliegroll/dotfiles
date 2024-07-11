@@ -70,18 +70,6 @@ git-prune-squashed() {
     git checkout -q main && git for-each-ref refs/heads/ "--format=%(refname:short)" | while read branch; do mergeBase=$(git merge-base main $branch) && [[ $(git cherry main $(git commit-tree $(git rev-parse "$branch^{tree}") -p $mergeBase -m _)) == "-"* ]] && git branch -D $branch; done
 }
 
-if [[ ! -a ~/.netlifyrc ]]; then
-    echo "~/.netlifyrc not found."
-else
-    source ~/.netlifyrc
-fi
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/charlie/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/charlie/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/charlie/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/charlie/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
-
 # bun completions
 [ -s "/Users/charlie/.bun/_bun" ] && source "/Users/charlie/.bun/_bun"
 
