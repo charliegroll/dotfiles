@@ -4,6 +4,8 @@ export EDITOR=vim
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+source <(fzf --zsh)
+
 eval "$(starship init zsh)"
 
 ### Make Homebrew's completions available
